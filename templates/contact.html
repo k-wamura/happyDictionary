@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>幸福辞書</title>
+    <link rel="stylesheet" href="static/destyle.css">
+    <link rel="stylesheet" href="static/form.css">
+
+</head>
+<body>
+    <header class="header">
+        <div class="header_inner">
+            <h1 class="title-logo">幸福辞書</h1>
+
+            <nav class="gnav">
+                <ul class="gnav-list">
+                    <li><a href="/">Top</a></li>
+                    <li><a href="List">List</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <h1>Contact Form</h1>
+
+    <form action="">
+
+        <input type="text" placeholder="Name" name="name" required>
+
+        <input type="email" placeholder="Email" name="email" required>
+
+        <textarea placeholder="Message" name="message" required></textarea>
+
+        <div class="captcha">
+            <input type="text" placeholder="Answer" name="captcha" required>
+            <input type="text" value="2 + 3 =" name="question"  required readonly>
+        </div>
+
+        <input type="submit" value="Send">
+
+    </form>
+</body>
+</html>

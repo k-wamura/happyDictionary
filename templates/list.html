@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>幸福辞書</title>
+    <link rel="stylesheet" href="static/destyle.css">
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header_inner">
+            <h1 class="title-logo">幸福辞書</h1>
+
+            <nav class="gnav">
+                <ul class="gnav-list">
+                    <li><a href="/">Top</a></li>
+                    <li><a href="List">List</a></li>
+                    <li><a href="/Contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    {% if results %}
+        {% for result in results %}
+        <div class="result-box">
+            <p><strong>ID:</strong> {{ result['id'] }}</p>
+            <p><strong>用語:</strong> {{ result['Word'] }}</p>
+            <p><strong>意味:</strong> {{ result['Meaning'] }}</p>
+            <p><strong>引用元:</strong> {{ result['Source'] }}</p>
+        </div>
+        {% endfor %}
+    {% else %}
+    <p>データがありません。</p>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,153 @@
+.header_inner {
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 20px 60px;
+    background-color: #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 7px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.096);
+}
+
+.title-logo {
+    font-size: 30px;
+    font-weight: bold;
+}
+ 
+.gnav-list {
+    display: flex;
+    font-weight: bold;
+}
+
+.gnav-list li {
+    margin-left: 30px;
+}
+
+/* ナビのホバーアニメーション (下線ふわっと) */
+/* .gnav-list a:hover {
+    display: inline-block;
+    color: #fdc427;
+}
+
+.gnav-list a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -30px;
+    background-color: #222;
+    width: 100%;
+    height: 2px;
+    opacity: 0;
+    transition: opacity 0.6s ease-out;
+}
+
+.gnav-list a:hover::after {
+    opacity: 1;
+}
+
+.gnav-list a {
+    position: relative;
+} */
+
+/* ナビのホバーアニメーション(下線左から) */
+.gnav-list a:hover {
+    display: inline-block;
+    color: #fdc427;
+}
+
+.gnav-list a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -30px;
+    background-color: #222;
+    width: 100%;
+    height: 2px;
+    transform: scale(0,1);
+    transform-origin: left top;
+    transition: transform 0.3s ease-out;
+}
+
+.gnav-list a:hover::after {
+    transform: scale(1,1);
+}
+
+.gnav-list a {
+    position: relative;
+}
+
+
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.row {
+    display: flex;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container h1 {
+    text-align: center;
+    color: #00ccff;
+}
+
+form {
+    text-align: center;
+}
+
+input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #00ccff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.result {
+    margin-top: 30px;
+}
+
+.error {
+    margin-top: 30px;
+    background-color: #ffcccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.result-box {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+.result-box p {
+    margin: 5px 0;
+}
